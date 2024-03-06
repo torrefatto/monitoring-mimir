@@ -1,0 +1,21 @@
+target: all
+
+common:
+  storage:
+    backend: s3
+    s3:
+      endpoint: "${S3_ENDPOINT}"
+      access_key_id: "${S3_KEY_ID}"
+      secret_access_key: "${S3_ACCESS_KEY}"
+      bucket_name: "${S3_BUCKET_NAME}"
+
+blocks_storage:
+  storage_prefix: blocks
+  tsdb:
+    dir: /data/ingester
+
+server:
+  log_level: info
+
+limits:
+  compactor_blocks_retention_period: 1y
