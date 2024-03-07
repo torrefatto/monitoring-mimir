@@ -20,3 +20,9 @@ server:
 
 limits:
   compactor_blocks_retention_period: 1y
+
+memberlist:
+  join_members:
+    - mimir-1.monitoring.koyeb
+    - mimir-2.monitoring.koyeb
+    - mimir-3.monitoring.koyeb
