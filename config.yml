@@ -1,5 +1,4 @@
 target: all
-multitenancy_enabled: false
 
 common:
   storage:
