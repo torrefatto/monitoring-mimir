@@ -22,6 +22,6 @@ limits:
 
 memberlist:
   join_members:
-    - mimir-1.monitoring.koyeb
-    - mimir-2.monitoring.koyeb
-    - mimir-3.monitoring.koyeb
+    - mimir-1.monitoring.koyeb:7946
+    - mimir-2.monitoring.koyeb:7946
+    - mimir-3.monitoring.koyeb:7946
