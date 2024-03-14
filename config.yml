@@ -9,6 +9,14 @@ common:
       secret_access_key: "${S3_ACCESS_KEY}"
       bucket_name: "${S3_BUCKET_NAME}"
 
+ingester:
+  ring:
+    instance_enable_ipv6: true
+
+distributor:
+  ring:
+    instance_enable_ipv6: true
+
 blocks_storage:
   storage_prefix: blocks
   tsdb:
