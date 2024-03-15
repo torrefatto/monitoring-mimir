@@ -65,3 +65,4 @@ memberlist:
     - dns+mimir-1.monitoring.koyeb:7946
     - dns+mimir-2.monitoring.koyeb:7946
     - dns+mimir-3.monitoring.koyeb:7946
+  advertise_addr: "${GOSSIP_ADDR}"
