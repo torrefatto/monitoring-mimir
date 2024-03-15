@@ -18,7 +18,7 @@ ingester:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
     instance_port: 7946
-  replication_factor: 1
+    replication_factor: 1
 
 distributor:
   ring:
@@ -39,7 +39,7 @@ alertmanager:
   sharding_ring:
     instance_addr: "${GOSSIP_ADDR}"
     instance_port: 7946
-  replication_factor: 1
+    replication_factor: 1
 
 compactor:
   sharding_ring:
@@ -50,7 +50,7 @@ store_gateway:
   sharding_ring:
     instance_addr: "${GOSSIP_ADDR}"
     instance_port: 7946
-  replication_factor: 1
+    replication_factor: 1
 
 blocks_storage:
   storage_prefix: blocks
