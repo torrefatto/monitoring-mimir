@@ -12,34 +12,42 @@ common:
 overrides_exporter:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 ingester:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 distributor:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 query_scheduler:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 ruler:
   ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 alertmanager:
   sharding_ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 compactor:
   sharding_ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 store_gateway:
   sharding_ring:
     instance_addr: "${GOSSIP_ADDR}"
+    instance_port: 7946
 
 blocks_storage:
   storage_prefix: blocks
