@@ -9,4 +9,5 @@ echo "GOSSIP_ADDR=${GOSSIP_ADDR}"
 
 /bin/mimir \
     -config.file=/config.yml \
-    -config.expand-env=true
+    -config.expand-env=true \
+    ${@}
