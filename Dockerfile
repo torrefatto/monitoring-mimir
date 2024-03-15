@@ -1,6 +1,7 @@
 FROM docker.io/grafana/mimir:latest
 
 COPY ./config.yml /config.yml
+COPY ./entrypoint.sh /entrypoint.sh
 RUN mkdir -p /data/ingester
 
-CMD ["-config.file=/config.yml", "-config.expand-env=true"]
+ENTRYPOINT ["/entrypoint.sh"]

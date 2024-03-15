@@ -9,13 +9,37 @@ common:
       secret_access_key: "${S3_ACCESS_KEY}"
       bucket_name: "${S3_BUCKET_NAME}"
 
+overrides_exporter:
+  ring:
+    instance_addr: "${GOSSIP_ADDR}"
+
 ingester:
   ring:
-    instance_enable_ipv6: true
+    instance_addr: "${GOSSIP_ADDR}"
 
 distributor:
   ring:
-    instance_enable_ipv6: true
+    instance_addr: "${GOSSIP_ADDR}"
+
+query_scheduler:
+  ring:
+    instance_addr: "${GOSSIP_ADDR}"
+
+ruler:
+  ring:
+    instance_addr: "${GOSSIP_ADDR}"
+
+alertmanager:
+  sharding_ring:
+    instance_addr: "${GOSSIP_ADDR}"
+
+compactor:
+  sharding_ring:
+    instance_addr: "${GOSSIP_ADDR}"
+
+store_gateway:
+  sharding_ring:
+    instance_addr: "${GOSSIP_ADDR}"
 
 blocks_storage:
   storage_prefix: blocks
